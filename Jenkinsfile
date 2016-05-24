@@ -8,6 +8,7 @@
  **/
 node {
   checkout scm
+  stage 'Build & Test Images'
   parallel(
     "image-alpine": { load 'alpine/Jenkinsfile' },
     "image-centos": { load 'centos/Jenkinsfile' },
