@@ -6,7 +6,7 @@
  * Build parameters, must be adjusted when forked!
  **/
 dockerImageName = 'blacklabelops/alpine'
-dockerFile = 'alpine/Dockerfile'
+dockerWorkspace = 'alpine/'
 dockerTags = ["latest","3.3"] as String[]
 dockerTestCommands =
  ["echo hello world",

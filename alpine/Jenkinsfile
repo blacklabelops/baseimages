@@ -11,5 +11,5 @@ node('docker') {
     checkout scm
     job = load '../build/buildImage.groovy'
     settings = load 'settings.groovy'
-    job.buildJobCI(settings.dockerFile,settings.dockerImageName,settings.dockerTags,settings.dockerTestCommands,settings.dockerImages,settings.getBranchName())
+    job.buildJobCI(settings.dockerWorkspace,settings.dockerImageName,settings.dockerTags,settings.dockerTestCommands,settings.dockerImages,settings.getBranchName())
 }
