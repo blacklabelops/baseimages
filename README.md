@@ -31,3 +31,19 @@ $ cd centos && docker build -t blacklabelops/centos .
 ~~~~
 $ docker run -it --rm blacklabelops/centos bash
 ~~~~
+
+## blacklabelops/ubuntu
+
+* Includes updates
+
+### Build the Image
+
+~~~~
+$ cd ubuntu && docker build -t blacklabelops/ubuntu .
+~~~~
+
+### Run the Image
+
+~~~~
+$ docker run -it --rm blacklabelops/ubuntu bash
+~~~~
