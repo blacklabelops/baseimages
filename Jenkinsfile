@@ -8,7 +8,9 @@
  **/
 node('docker') {
   checkout scm
-  load 'alpine/Jenkinsfile'
-  load 'centos/Jenkinsfile'
-  load 'ubuntu/Jenkinsfile'
+  def images = [:]
+  images["image-alpine"] = load 'alpine/Jenkinsfile'
+  images["image-centos"] = load 'centos/Jenkinsfile'
+  images["image-ubuntu"] = load 'ubuntu/Jenkinsfile'
+  parallel images
 }
