@@ -9,7 +9,7 @@
 
 node('docker') {
     checkout scm
-    job = load '../build/buildImage.groovy'
-    settings = load 'settings.groovy'
+    job = load 'build/buildImage.groovy'
+    settings = load 'ubuntu/settings.groovy'
     job.buildJobCI(settings.dockerWorkspace,settings.dockerImageName,settings.dockerTags,settings.dockerTestCommands,settings.dockerImages,job.getBranchName())
 }
