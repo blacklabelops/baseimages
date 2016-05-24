@@ -7,11 +7,27 @@ Alpine images are smaller than full distributions, e.g. CentOS. This is a base i
 ### Build the Image
 
 ~~~~
-$ docker build -t blacklabelops/alpine .
+$ cd alpine && docker build -t blacklabelops/alpine .
 ~~~~
 
 ### Run the Image
 
 ~~~~
 $ docker run -it --rm blacklabelops/alpine bash
+~~~~
+
+## blacklabelops/centos
+
+* Includes updates
+
+### Build the Image
+
+~~~~
+$ cd centos && docker build -t blacklabelops/centos .
+~~~~
+
+### Run the Image
+
+~~~~
+$ docker run -it --rm blacklabelops/centos bash
 ~~~~
