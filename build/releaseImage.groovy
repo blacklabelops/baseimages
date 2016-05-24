@@ -3,17 +3,9 @@
  **/
 
 def pushImages(dockerRepositories,dockerImageName,dockerTags,branchName) {
-  stage 'Repository-Login'
-  repositoryLogin(dockerRepositories[0][0],dockerRepositories[0][1],dockerRepositories[0][2])
-
-  try {
-    stage 'Repository-Push'
-    for (int i=0;i < dockerTags.length;i++) {
-        dockerPush(dockerImageName,dockerTags[i],branchName,dockerRepositories[0][0])
-    }
-  } finally {
-    stage 'Repository-Logout'
-    sh 'docker logout'
+  stage 'Repository-Push'
+  for (int i=0;i < dockerTags.length;i++) {
+      dockerPush(dockerImageName,dockerTags[i],branchName,dockerRepositories[0][0])
   }
 }
 
