@@ -13,18 +13,15 @@
  }
 
 def buildJobCI(dockerWorkspace,dockerImageName,dockerTags,dockerTestCommands,dockerImages,branchName) {
-  stage 'Refresh Images'
   for (int i=0;i < dockerImages.length;i++) {
     pullImage(dockerImages[i])
   }
 
-  stage 'Build Image'
   echo 'Building Images'
   for (int i=0;i < dockerTags.length;i++) {
     buildImage(dockerWorkspace,dockerImageName,dockerTags[i],branchName)
   }
 
-  stage 'Test Image'
   echo 'Testing Images'
   for (int i=0;i < dockerTags.length;i++) {
     testImage(dockerImageName,dockerTags[i],branchName,dockerTestCommands)
