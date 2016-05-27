@@ -1,9 +1,6 @@
 FROM alpine:3.3
 MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 
-# Default UTF-8 encoding
-ENV LANG en_US.UTF-8
-
 RUN apk upgrade --update && \
     apk add \
       bash && \
