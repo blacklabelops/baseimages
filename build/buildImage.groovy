@@ -13,10 +13,6 @@
  }
 
 def buildJobCI(dockerWorkspace,dockerImageName,dockerTags,dockerTestCommands,dockerImages,branchName) {
-  for (int i=0;i < dockerImages.length;i++) {
-    pullImage(dockerImages[i])
-  }
-
   echo 'Building Images'
   for (int i=0;i < dockerTags.length;i++) {
     buildImage(dockerWorkspace,dockerImageName,dockerTags[i],branchName)
