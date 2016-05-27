@@ -5,5 +5,6 @@ MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
 ENV LANG C.UTF-8
 
 RUN apt-get update && \
+    apt-get -y dist-upgrade && \
     apt-get autoclean && \
     rm -rf /tmp/* && rm -rf /var/log/*
