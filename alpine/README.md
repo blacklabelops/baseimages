@@ -95,14 +95,6 @@ exec su-exec your_user your_application_command_here
 
 > Simple entrypoint.sh script example.
 
-# Using wait-for-it
-
-wait-for-it is a solution for helping to build a docker start up order of containers.
-
-More information: [vishnubob/wait-for-it](https://github.com/vishnubob/wait-for-it)
-
-Use-Case example: [Controlling startup order in Compose](https://docs.docker.com/compose/startup-order/)
-
 # Build the Image
 
 ~~~~

@@ -12,8 +12,6 @@ RUN apk upgrade --update && \
       curl && \
     # Network fix
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
-    # Wait for it - Waiting For Available Ports And Servers
-    curl https://raw.githubusercontent.com/vishnubob/wait-for-it/55c54a5abdfb32637b563b28cc088314b162195e/wait-for-it.sh -o /usr/bin/wait-for-it && \
     # Blacklabelops Feature Script Folder
     mkdir -p ${BLACKLABELOPS_HOME} && \
     # Clean up
