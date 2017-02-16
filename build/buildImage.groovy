@@ -3,7 +3,7 @@
  **/
 
  def getBranchName() {
-   def branchName = env.JOB_NAME.replaceFirst('.+/', '')
+   def branchName = env.BRANCH_NAME.replaceFirst('.+/', '')
    echo 'Building on Branch: ' + branchName
    def tagPostfix = ''
    if (branchName != null && !'master'.equals(branchName)) {
