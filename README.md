@@ -1,5 +1,7 @@
 # blacklabelops/alpine
 
+[![Docker Stars](https://img.shields.io/docker/stars/blacklabelops/alpine.svg)](https://hub.docker.com/r/blacklabelops/alpine/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacklabelops/alpine.svg)](https://hub.docker.com/r/blacklabelops/alpine/)
+
 Blacklabelops Alpine Base Image
 
 * Includes repository updates
@@ -13,6 +15,8 @@ Blacklabelops Alpine Base Image
 [Dockerhub Repository](https://hub.docker.com/r/blacklabelops/alpine/)
 
 # blacklabelops/centos
+
+[![Docker Stars](https://img.shields.io/docker/stars/blacklabelops/centos.svg)](https://hub.docker.com/r/blacklabelops/centos/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacklabelops/centos.svg)](https://hub.docker.com/r/blacklabelops/centos/)
 
 * Includes updates
 
@@ -29,6 +33,8 @@ $ docker run -it --rm blacklabelops/centos bash
 ~~~~
 
 # blacklabelops/ubuntu
+
+[![Docker Stars](https://img.shields.io/docker/stars/blacklabelops/ubuntu.svg)](https://hub.docker.com/r/blacklabelops/ubuntu/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacklabelops/ubuntu.svg)](https://hub.docker.com/r/blacklabelops/ubuntu/)
 
 * Includes updates
 
