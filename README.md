@@ -1,48 +1,44 @@
-## blacklabelops/alpine
+# blacklabelops/alpine
 
-Alpine images are smaller than full distributions, e.g. CentOS. This is a base image with some tweaks based on the official alpine image on Dockerhub.
+Blacklabelops Alpine Base Image
 
-* Includes updates
+* Includes repository updates
+* tini: Zombie Process Reaper
+* su-exec: Execute processes as different user
+* wait-for-it: Waiting for available server ports.
+* Feature Script: Runtime user definition with environment variables.
 
-### Build the Image
+[README.de](alpine/README.md)
 
-~~~~
-$ cd alpine && docker build -t blacklabelops/alpine .
-~~~~
+[Dockerhub Repository](https://hub.docker.com/r/blacklabelops/alpine/)
 
-### Run the Image
-
-~~~~
-$ docker run -it --rm blacklabelops/alpine bash
-~~~~
-
-## blacklabelops/centos
+# blacklabelops/centos
 
 * Includes updates
 
-### Build the Image
+## Build the Image
 
 ~~~~
 $ cd centos && docker build -t blacklabelops/centos .
 ~~~~
 
-### Run the Image
+## Run the Image
 
 ~~~~
 $ docker run -it --rm blacklabelops/centos bash
 ~~~~
 
-## blacklabelops/ubuntu
+# blacklabelops/ubuntu
 
 * Includes updates
 
-### Build the Image
+## Build the Image
 
 ~~~~
 $ cd ubuntu && docker build -t blacklabelops/ubuntu .
 ~~~~
 
-### Run the Image
+## Run the Image
 
 ~~~~
 $ docker run -it --rm blacklabelops/ubuntu bash
