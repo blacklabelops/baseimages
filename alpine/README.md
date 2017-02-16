@@ -24,17 +24,68 @@ $ cd alpine && docker build -t blacklabelops/alpine .
 $ docker run -it --rm blacklabelops/alpine bash
 ~~~~
 
+# Blacklabelops Dockerwait Feature
+
+The Blacklabelops Dockerwait Feature is a script for polling server ports. This is mandatory when you want to wait for other containers starting web servers or databases.
+
+You can define a the waiting parameters with the enviromnemt variables:
+
+* `DOCKER_WAIT_HOST`: The host to poll. Mandatory!
+* `DOCKER_WAIT_PORT`: The port to poll Mandatory!
+* `DOCKER_WAIT_TIMEOUT`: The timeout in seconds. Optional! Default: 60
+* `CURRENT_DOCKER_WAIT_INTERVAL`: The polling interval in seconds. Optional! Default:5
+
+Example waiting for a postgresql database:
+
+First start the polling container:
+
+~~~~
+$ docker network create testnetwork
+$ docker run \
+    --net testnetwork \
+    -e "DOCKER_WAIT_HOST=postgres" \
+    -e "DOCKER_WAIT_PORT=5432" \
+    blacklabelops/alpine dockerwait
+~~~~
+
+> Waits at most 60 seconds for the database.
+
+Secondly start the database:
+
+~~~~
+$ docker run -d --name postgres \
+    --net testnetwork --hostname postgres \
+    -e 'POSTGRES_USER=postgres' \
+    -e 'POSTGRES_PASSWORD=postgres' \
+    postgres:9.4
+~~~~
+
+> Starts postgres database under hostname `postgres` in docker network `testnetwork`
+
+You can integrate this feature inside your entrypoint:
+
+~~~~
+#!/bin/bash
+
+# Use The Feature Script
+source /usr/bin/dockerwait
+# Executing The Application
+exec your_application_command_here
+~~~~
+
+> Simple entrypoint.sh script example.
+
 # Blacklabelops User Feature
 
-The blacklabelops User Feature is a script for specifiying the run user of your application with env variables.
+The Blacklabelops User Feature is a script for specifiying the run user of your application with env variables.
 The user will be created automatically and can be user inside your entrypoint to start your application using `su-exec`.
 
 You can define a user for your application at startup with the environment variables:
 
-* DOCKER_USER: The user's name, should match a valid username on your host machine (Default: blacklabelops).
-* DOCKER_USER_ID: The user's id should match a valid id on your host machine (Default: 1000).
-* DOCKER_USERGROUP: The user's groupname, should match a valid groupname on your host machine (Default: blacklabelops).
-* DOCKER_USERGROUP_ID: The user's groupid, should match a valid goup id on your host machine (Default: 1000).
+* `DOCKER_USER`: The user's name, should match a valid username on your host machine (Default: blacklabelops).
+* `DOCKER_USER_ID`: The user's id should match a valid id on your host machine (Default: 1000).
+* `DOCKER_USERGROUP`: The user's groupname, should match a valid groupname on your host machine (Default: blacklabelops).
+* `DOCKER_USERGROUP_ID`: The user's groupid, should match a valid goup id on your host machine (Default: 1000).
 
 Example Use Case:
 

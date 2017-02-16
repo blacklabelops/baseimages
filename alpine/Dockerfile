@@ -21,6 +21,7 @@ RUN apk upgrade --update && \
     rm -rf /var/log/*
 
 COPY imagescripts/ ${BLACKLABELOPS_HOME}/
+COPY imagescripts/dockerwait.sh /usr/bin/dockerwait
 
 LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
