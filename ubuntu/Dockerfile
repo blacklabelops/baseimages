@@ -11,4 +11,4 @@ LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.image.os="ubuntu" \
       com.blacklabelops.image.osversion="16.04" \
       com.blacklabelops.image.name.ubuntu="ubuntu-base-image" \
-      con.blacklabelops.image.builddate.ubuntu=${BUILD_DATE}
+      com.blacklabelops.image.builddate.ubuntu=${BUILD_DATE}

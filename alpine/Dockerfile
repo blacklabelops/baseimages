@@ -27,4 +27,4 @@ LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.image.os="alpine" \
       com.blacklabelops.image.osversion="3.5" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
-      con.blacklabelops.image.builddate.alpine=${BUILD_DATE}
+      com.blacklabelops.image.builddate.alpine=${BUILD_DATE}
