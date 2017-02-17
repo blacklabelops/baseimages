@@ -1,6 +1,6 @@
 FROM alpine:3.5
 
-ARG ALPINE_IMAGE_BUILD_DATE=undefined
+ARG BUILD_DATE=undefined
 
 ENV BLACKLABELOPS_HOME=/var/blacklabelops
 
@@ -24,5 +24,7 @@ COPY imagescripts/ ${BLACKLABELOPS_HOME}/
 COPY imagescripts/dockerwait.sh /usr/bin/dockerwait
 
 LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
+      com.blacklabelops.image.os="alpine" \
+      com.blacklabelops.image.osversion="3.5" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
-      con.blacklabelops.image.builddate.alpine=${ALPINE_IMAGE_BUILD_DATE}
+      con.blacklabelops.image.builddate.alpine=${BUILD_DATE}

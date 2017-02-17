@@ -42,7 +42,7 @@ def buildImage(dockerWorkspace, imageName, tagName, branchName) {
   def branchSuffix = branchName?.trim() ? '-' + branchName : ''
   def image = imageName + ':' + tagName + branchSuffix
   echo 'Building image: ' + image
-  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache -t ' + image + ' .'
+  sh 'cd ' + dockerWorkspace + ' && docker build --no-cache ' + '--build-arg BUILD_DATE=' + new java.util.Date() + ' -t ' + '  ' + image + ' .'
 }
 
 return this;

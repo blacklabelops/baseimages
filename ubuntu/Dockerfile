@@ -1,7 +1,14 @@
 FROM ubuntu:16.04
-MAINTAINER Steffen Bleul <sbl@blacklabelops.com>
+
+ARG BUILD_DATE=undefined
 
 RUN apt-get update && \
     apt-get -y dist-upgrade && \
     apt-get autoclean && \
     rm -rf /tmp/* && rm -rf /var/log/*
+
+LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
+      com.blacklabelops.image.os="ubuntu" \
+      com.blacklabelops.image.osversion="16.04" \
+      com.blacklabelops.image.name.ubuntu="ubuntu-base-image" \
+      con.blacklabelops.image.builddate.ubuntu=${BUILD_DATE}
