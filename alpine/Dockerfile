@@ -24,6 +24,9 @@ COPY imagescripts/ ${BLACKLABELOPS_HOME}/
 COPY imagescripts/dockerwait.sh /usr/bin/dockerwait
 
 LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
+      com.blacklabelops.maintainer.name="Steffen Bleul" \
+      com.blacklabelops.maintainer.email="sbl@blacklabelops.com" \
+      com.blacklabelops.support="http://support.blacklabelops.com/" \
       com.blacklabelops.image.os="alpine" \
       com.blacklabelops.image.osversion="3.5" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
