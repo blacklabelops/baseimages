@@ -7,7 +7,7 @@
  **/
 dockerImageName = 'blacklabelops/ubuntu'
 dockerWorkspace = 'ubuntu/'
-dockerTags = ["latest","16.04"] as String[]
+dockerTags = ["latest","16.10"] as String[]
 dockerTestCommands =
  ["echo hello world",
   "ps -All",
@@ -16,6 +16,6 @@ dockerTestCommands =
   "cat /etc/hosts",
   "cat /etc/passwd"] as String[]
 dockerRepositories = [["","Dockerhub","DockerhubEmail"]] as String[][]
-dockerImages = ["ubuntu:16.04"] as String[]
+dockerImages = ["ubuntu:16.10"] as String[]
 
 return this;

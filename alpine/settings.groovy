@@ -18,6 +18,6 @@ dockerTestCommands =
   "/sbin/tini -h",
   "su-exec"] as String[]
 dockerRepositories = [["","Dockerhub","DockerhubEmail"]] as String[][]
-dockerImages = ["alpine:3.4"] as String[]
+dockerImages = ["alpine:3.5"] as String[]
 
 return this;
