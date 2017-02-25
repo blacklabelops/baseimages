@@ -33,7 +33,7 @@ You can define a the waiting parameters with the enviromnemt variables:
 * `DOCKER_WAIT_HOST`: The host to poll. Mandatory!
 * `DOCKER_WAIT_PORT`: The port to poll Mandatory!
 * `DOCKER_WAIT_TIMEOUT`: The timeout in seconds. Optional! Default: 60
-* `CURRENT_DOCKER_WAIT_INTERVAL`: The polling interval in seconds. Optional! Default:5
+* `DOCKER_WAIT_INTERVAL`: The polling interval in seconds. Optional! Default:5
 
 Example waiting for a postgresql database:
 
