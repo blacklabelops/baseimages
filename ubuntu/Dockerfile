@@ -10,7 +10,7 @@ RUN apt-get update && \
 LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.maintainer.name="Steffen Bleul" \
       com.blacklabelops.maintainer.email="sbl@blacklabelops.com" \
-      com.blacklabelops.support="http://support.blacklabelops.com/" \
+      com.blacklabelops.support="https://www.hipchat.com/gEorzhvnI" \
       com.blacklabelops.image.os="ubuntu" \
       com.blacklabelops.image.osversion="16.04" \
       com.blacklabelops.image.name.ubuntu="ubuntu-base-image" \
