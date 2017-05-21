@@ -146,6 +146,20 @@ exec su-exec your_user your_application_command_here
 
 > Simple entrypoint.sh script example.
 
+# Using dockerize
+
+Dockerize is a tool that allows to wait for available ports and sites on the network.
+
+More information: [jwilder/dockerize](https://github.com/jwilder/dockerize)
+
+Example waiting for a database and website:
+
+~~~~
+$ dockerize -wait tcp://db:5432 -wait http://web:80 -timeout 10s
+~~~~
+
+> The parameter `-wait` can be used arbitrary times.
+
 # Build the Image
 
 ~~~~

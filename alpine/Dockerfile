@@ -2,20 +2,28 @@ FROM alpine:3.5
 
 ARG BUILD_DATE=undefined
 
-ENV BLACKLABELOPS_HOME=/var/blacklabelops
+ENV BLACKLABELOPS_HOME=/var/blacklabelops \
+    DOCKERIZE_VERSION=v0.4.0
 
 RUN apk upgrade --update && \
     apk add \
       bash \
       tini \
       su-exec \
+      gzip \
+      tar \
+      wget \
       curl && \
     # Network fix
     echo 'hosts: files mdns4_minimal [NOTFOUND=return] dns mdns4' >> /etc/nsswitch.conf && \
     # Blacklabelops Feature Script Folder
     mkdir -p ${BLACKLABELOPS_HOME} && \
+    # Install dockerize
+    wget -O /tmp/dockerize.tar.gz https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz && \
+    tar -C /usr/local/bin -xzvf /tmp/dockerize.tar.gz && \
     # Clean up
-    apk del curl && \
+    apk del curl \
+      wget && \
     rm -rf /var/cache/apk/* && \
     rm -rf /tmp/* && \
     rm -rf /var/log/*
