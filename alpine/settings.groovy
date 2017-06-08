@@ -7,7 +7,7 @@
  **/
 dockerImageName = 'blacklabelops/alpine'
 dockerWorkspace = 'alpine/'
-dockerTags = ["latest","3.5"] as String[]
+dockerTags = ["3.5"] as String[]
 dockerTestCommands =
  ["echo hello world",
   "ps -All",
