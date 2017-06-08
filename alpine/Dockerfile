@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM alpine:3.6
 
 ARG BUILD_DATE=undefined
 
@@ -36,6 +36,6 @@ LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.maintainer.email="sbl@blacklabelops.com" \
       com.blacklabelops.support="https://www.hipchat.com/gEorzhvnI" \
       com.blacklabelops.image.os="alpine" \
-      com.blacklabelops.image.osversion="3.5" \
+      com.blacklabelops.image.osversion="3.6" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
       com.blacklabelops.image.builddate.alpine=${BUILD_DATE}
