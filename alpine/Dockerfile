@@ -8,6 +8,8 @@ ENV BLACKLABELOPS_HOME=/var/blacklabelops \
 RUN apk upgrade --update && \
     apk add \
       bash \
+      tzdata \
+      vim \
       tini \
       su-exec \
       gzip \
