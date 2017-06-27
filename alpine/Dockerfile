@@ -3,7 +3,7 @@ FROM alpine:3.6
 ARG BUILD_DATE=undefined
 
 ENV BLACKLABELOPS_HOME=/var/blacklabelops \
-    DOCKERIZE_VERSION=v0.4.0
+    DOCKERIZE_VERSION=v0.5.0
 
 RUN apk upgrade --update && \
     apk add \
