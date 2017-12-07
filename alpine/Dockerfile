@@ -1,9 +1,9 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
 ARG BUILD_DATE=undefined
 
 ENV BLACKLABELOPS_HOME=/var/blacklabelops \
-    DOCKERIZE_VERSION=v0.5.0
+    DOCKERIZE_VERSION=v0.6.0
 
 RUN apk upgrade --update && \
     apk add \
@@ -38,6 +38,6 @@ LABEL maintainer="Steffen Bleul <sbl@blacklabelops.com>" \
       com.blacklabelops.maintainer.email="sbl@blacklabelops.com" \
       com.blacklabelops.support="https://www.hipchat.com/gEorzhvnI" \
       com.blacklabelops.image.os="alpine" \
-      com.blacklabelops.image.osversion="3.6" \
+      com.blacklabelops.image.osversion="3.7" \
       com.blacklabelops.image.name.alpine="alpine-base-image" \
       com.blacklabelops.image.builddate.alpine=${BUILD_DATE}
