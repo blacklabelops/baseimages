@@ -2,17 +2,9 @@
 
 | Base Image   | Tag          | Dockerfile | Readme |
 |--------------|--------------|------------|--------|
-| blacklabelops/alpine | latest, 3.7 | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
-| blacklabelops/centos | latest, 7, 7.3 , 7.3.1611 | [Dockerfile](centos/Dockerfile) | [README.md](README.md) |
-| blacklabelops/ubuntu | latest, 16.10 | [Dockerfile](ubuntu/Dockerfile) | [README.md](README.md) |
-
-# Daily Build Images
-
-| Base Image   | Tag          | Dockerfile | Readme |
-|--------------|--------------|------------|--------|
-| blacklabelops/alpine | 3.4 | [Dockerfile](https://github.com/blacklabelops/baseimages/blob/alpine-3.4/alpine/Dockerfile) | [README.md](https://github.com/blacklabelops/baseimages/blob/alpine-3.4/alpine/README.md) |
-| blacklabelops/alpine | 3.5 | [Dockerfile](https://github.com/blacklabelops/baseimages/blob/alpine-3.5/alpine/Dockerfile) | [README.md](https://github.com/blacklabelops/baseimages/blob/alpine-3.5/alpine/README.md)) |
-| blacklabelops/alpine | 3.6 | [Dockerfile](https://github.com/blacklabelops/baseimages/blob/alpine-3.6/alpine/Dockerfile) | [README.md](https://github.com/blacklabelops/baseimages/blob/alpine-3.6/alpine/README.md)) |
+| blacklabelops/alpine | latest, 3.6 | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
+| blacklabelops/centos | latest, 7, 7.4 , 7.4.1708 | [Dockerfile](centos/Dockerfile) | [README.md](README.md) |
+| blacklabelops/ubuntu | latest, 18, 18.04 | [Dockerfile](ubuntu/Dockerfile) | [README.md](README.md) |
 
 # Support
 
