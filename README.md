@@ -2,7 +2,7 @@
 
 | Base Image   | Tag          | Dockerfile | Readme |
 |--------------|--------------|------------|--------|
-| blacklabelops/alpine | latest, 3.6 | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
+| blacklabelops/alpine | latest, 3.8 | [Dockerfile](alpine/Dockerfile) | [README.md](alpine/README.md) |
 | blacklabelops/centos | latest, 7, 7.4 , 7.4.1708 | [Dockerfile](centos/Dockerfile) | [README.md](README.md) |
 | blacklabelops/ubuntu | latest, 18, 18.04 | [Dockerfile](ubuntu/Dockerfile) | [README.md](README.md) |
 
