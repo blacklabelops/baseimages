@@ -7,7 +7,7 @@
  **/
 dockerImageName = 'blacklabelops/alpine'
 dockerWorkspace = 'alpine/'
-dockerTags = ["3.7"] as String[]
+dockerTags = ["3.8"] as String[]
 dockerTestCommands =
  ["echo hello world",
   "ps -All",
@@ -18,6 +18,6 @@ dockerTestCommands =
   "/sbin/tini -h",
   "su-exec"] as String[]
 dockerRepositories = [["","Dockerhub","DockerhubEmail"]] as String[][]
-dockerImages = ["alpine:3.7"] as String[]
+dockerImages = ["alpine:3.8"] as String[]
 
 return this;
