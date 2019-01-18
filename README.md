@@ -6,10 +6,6 @@
 | blacklabelops/centos | latest, 7, 7.4 , 7.4.1708 | [Dockerfile](centos/Dockerfile) | [README.md](README.md) |
 | blacklabelops/ubuntu | latest, 18, 18.04 | [Dockerfile](ubuntu/Dockerfile) | [README.md](README.md) |
 
-# Support
-
-Leave a message and ask questions on Hipchat: [blacklabelops/support](https://www.hipchat.com/gEorzhvnI)
-
 # blacklabelops/alpine
 
 [![Docker Stars](https://img.shields.io/docker/stars/blacklabelops/alpine.svg)](https://hub.docker.com/r/blacklabelops/alpine/) [![Docker Pulls](https://img.shields.io/docker/pulls/blacklabelops/alpine.svg)](https://hub.docker.com/r/blacklabelops/alpine/)
